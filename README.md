@@ -6,7 +6,7 @@ Open-source, zero-dependency, 100% client-side generator for an **A4 COLREGS day
 - **FairHelm Courses:** [**fairhelm.com/en/courses/**](https://fairhelm.com/en/courses/)
 - **Free VHF & DSC Simulator:** [**fairhelm.com/en/free-vhf/**](https://fairhelm.com/en/free-vhf/)
 
-Later FairHelm embed (canonical on the site): `https://fairhelm.com/[locale]/free-vhf/day-shapes/`.
+**FairHelm embed:** [**fairhelm.com/en/free-vhf/day-shapes/**](https://fairhelm.com/en/free-vhf/day-shapes/) (vendor sync from this repo).
 
 ---
 
