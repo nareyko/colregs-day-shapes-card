@@ -1,0 +1,15 @@
+{
+  "name": "colregs-day-shapes-card",
+  "version": "1.0.0",
+  "description": "A4 printable COLREGS day-shapes cockpit reference card (FairHelm Open-Source Seamanship Suite)",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nareyko/colregs-day-shapes-card.git"
+  },
+  "homepage": "https://nareyko.github.io/colregs-day-shapes-card/",
+  "scripts": {
+    "test": "node --test shapes-model.test.mjs"
+  }
+}

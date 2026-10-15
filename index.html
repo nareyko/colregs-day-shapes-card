@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>COLREGS Day Shapes Cockpit Card Generator — FairHelm</title>
+  <meta name="description" content="Free A4 COLREGS day-shapes cockpit reference card: black day signals for recreational sailors (Rules 24–30). Print-ready for chart-table lamination. Sister to FairHelm courses and free-vhf.">
+  <link rel="canonical" id="canonical-link" href="https://nareyko.github.io/colregs-day-shapes-card/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "FairHelm COLREGS Day Shapes Cockpit Card Generator",
+    "applicationCategory": "NavigationApplication",
+    "operatingSystem": "All",
+    "url": "https://nareyko.github.io/colregs-day-shapes-card/",
+    "description": "A4 printable COLREGS day-shapes cockpit reference card for recreational sailors. Free client-side tool in the FairHelm Open-Source Seamanship Suite; pairs with FairHelm courses and the free-vhf radio simulator.",
+    "isBasedOn": "https://fairhelm.com/en/courses/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FairHelm",
+      "url": "https://fairhelm.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="screen-only app-header">
+    <div class="header-main">
+      <div>
+        <p class="kicker" id="ui-kicker">COLREGS · DAY SHAPES · RULES 24–30 · A4</p>
+        <h1 id="ui-title">COLREGS Day Shapes Cockpit Card</h1>
+        <p class="lede" id="ui-lede">Optional vessel name and home waters. Print the black day-shape grid for the chart table — laminate and keep where the watch can see it in daylight.</p>
+      </div>
+      <div class="header-actions">
+        <label class="lang-picker" for="lang-select">
+          <span class="sr-only">Language</span>
+          <select id="lang-select" aria-label="Language">
+            <option value="en">EN · English</option>
+            <option value="de">DE · Deutsch</option>
+            <option value="sv">SV · Svenska</option>
+            <option value="ru">RU · Русский</option>
+            <option value="pl">PL · Polski</option>
+            <option value="es">ES · Español</option>
+            <option value="uk">UK · Українська</option>
+            <option value="ar">AR · العربية</option>
+            <option value="zh">ZH · 中文</option>
+            <option value="he">HE · עברית</option>
+          </select>
+        </label>
+        <button type="button" id="btn-night" class="btn-secondary" aria-pressed="false">Night Red Light</button>
+        <button type="button" id="btn-print" class="btn-primary">Print / Save A4 PDF for Lamination</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="screen-only editor-panel" aria-labelledby="ui-form-heading">
+      <div class="editor-card">
+        <div class="editor-card-header">
+          <h2 id="ui-form-heading">Vessel &amp; Waters (optional)</h2>
+          <p class="privacy-badge" id="ui-privacy">100% client-side: vessel data never leaves your browser.</p>
+        </div>
+
+        <div class="presets-bar">
+          <span class="presets-label" id="ui-presets-label">Quick Presets:</span>
+          <button type="button" class="chip" id="btn-sample">Sample Yacht</button>
+          <button type="button" class="chip" id="btn-blank">Blank</button>
+        </div>
+
+        <form id="card-form" autocomplete="off" novalidate>
+          <div class="field-grid">
+            <label class="field">
+              <span id="lbl-vessel">Vessel Name</span>
+              <input type="text" id="in-vessel" maxlength="36" placeholder="SY AURORA">
+            </label>
+
+            <label class="field">
+              <span id="lbl-waters">Home Waters / Cruising Area</span>
+              <input type="text" id="in-waters" maxlength="48" placeholder="Stockholm Archipelago">
+            </label>
+          </div>
+
+          <div class="editor-footer-actions">
+            <button type="button" id="btn-print-bottom" class="btn-primary full-width">Print / Save A4 PDF for Lamination</button>
+            <div class="secondary-row">
+              <button type="button" id="btn-copy-link" class="btn-secondary">Copy Boat Link</button>
+              <div class="credit-links">
+                <a id="credit-courses" class="fairhelm-pill" href="https://fairhelm.com/en/courses/" target="_blank" rel="noopener">FairHelm Courses ↗</a>
+                <a id="credit-vhf" class="fairhelm-pill" href="https://fairhelm.com/en/free-vhf/" target="_blank" rel="noopener">Free VHF ↗</a>
+              </div>
+            </div>
+            <p id="copy-status" class="copy-status" role="status" aria-live="polite" hidden></p>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    <section class="sheet-stage" aria-label="A4 Print Preview">
+      <article class="a4-sheet" id="a4-sheet">
+        <div class="punch-marks" aria-hidden="true">
+          <span class="punch-hole"></span>
+          <span class="trim-caption" id="sheet-header-right">MOUNT BY CHART TABLE · LAMINATE A4</span>
+          <span class="punch-hole"></span>
+        </div>
+
+        <header class="sheet-top-bar">
+          <div class="sheet-top-title" id="sheet-header-left">
+            COLREGS DAY SHAPES · BLACK SIGNALS BY DAY
+          </div>
+          <div class="sheet-top-port" id="out-waters-badge">STOCKHOLM ARCHIPELAGO</div>
+        </header>
+
+        <section class="vessel-id-grid" aria-label="Vessel Identification">
+          <div class="id-cell">
+            <div class="id-label" id="lbl-id-vessel">VESSEL</div>
+            <div class="id-value-xl" id="out-vessel-name">SY AURORA</div>
+          </div>
+          <div class="id-cell">
+            <div class="id-label" id="lbl-id-waters">WATERS</div>
+            <div class="id-value-xl" id="out-waters">Stockholm Archipelago</div>
+          </div>
+        </section>
+
+        <section class="shapes-grid-wrap" aria-label="COLREGS day shapes">
+          <div class="shapes-grid-title" id="out-grid-title">MAIN DAY SHAPES (RECREATIONAL / COASTAL)</div>
+          <div class="shapes-grid" id="shapes-grid"></div>
+        </section>
+
+        <section class="mid-grid mid-grid-single">
+          <div class="check-box">
+            <div class="ref-title" id="out-checklist-title">WATCHKEEPING NOTES</div>
+            <ol class="check-list" id="out-checklist"></ol>
+          </div>
+        </section>
+
+        <footer class="sheet-footer">
+          <div class="qr-block">
+            <div class="qr-svg-wrap" id="qr-container" aria-hidden="false"></div>
+            <div>
+              <div class="qr-title" id="out-qr-title">Learn Seamanship with FairHelm Courses</div>
+              <div class="qr-body" id="out-qr-body">Scan QR or visit fairhelm.com/en/courses/</div>
+            </div>
+          </div>
+          <div class="sheet-meta-right">
+            <a id="sheet-courses-link" href="https://fairhelm.com/en/courses/" target="_blank" rel="noopener">fairhelm.com/en/courses/</a>
+            <a id="sheet-vhf-link" href="https://fairhelm.com/en/free-vhf/" target="_blank" rel="noopener">fairhelm.com/en/free-vhf/</a>
+            <span class="sheet-standard" id="out-fairhelm-credit">© FairHelm · Open-Source Seamanship Suite</span>
+          </div>
+        </footer>
+      </article>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
