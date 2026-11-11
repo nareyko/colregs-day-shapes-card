@@ -205,7 +205,20 @@ function applyPreset(key) {
   renderSheetValues();
 }
 
+
+function applyEmbedChrome() {
+  const params = new URLSearchParams(window.location.search);
+  const embed =
+    params.get("embed") === "1" ||
+    (typeof window !== "undefined" && window.self !== window.top);
+  if (!embed) return;
+  document.documentElement.classList.add("embed-mode");
+  document.body.classList.add("embed-mode");
+}
+
 function init() {
+  applyEmbedChrome();
+
   const langSelect = el("lang-select");
   if (langSelect) {
     langSelect.value = currentLang;

@@ -680,3 +680,93 @@ body.night-mode .sheet-meta-right a {
     fill: #0b1726 !important;
   }
 }
+
+
+/* --- UX 2026-11-11: embed (FairHelm iframe) + sticky mobile actions + sister tools --- */
+.sister-tools {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 8px 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.sister-tools a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--panel-border);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.sister-tools a[aria-current="page"] {
+  border-color: rgba(224, 49, 49, 0.55);
+  background: rgba(224, 49, 49, 0.12);
+}
+
+.sister-tools a:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+body.embed-mode .app-header h1,
+body.embed-mode .app-header .lede,
+body.embed-mode .sister-tools {
+  display: none !important;
+}
+
+body.embed-mode .app-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 8px 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 21, 34, 0.94);
+}
+
+body.embed-mode .header-main {
+  gap: 10px;
+}
+
+body.embed-mode .workspace {
+  padding: 12px;
+  gap: 14px;
+}
+
+body.embed-mode .editor-card {
+  top: 64px;
+}
+
+@media (max-width: 720px) {
+  .app-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .header-actions .btn-primary {
+    flex: 1 1 auto;
+    min-height: 44px;
+  }
+
+  .lang-picker select {
+    min-height: 40px;
+  }
+}
+
+@media print {
+  .sister-tools {
+    display: none !important;
+  }
+}
