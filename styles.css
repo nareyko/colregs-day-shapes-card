@@ -770,3 +770,112 @@ body.embed-mode .editor-card {
     display: none !important;
   }
 }
+
+
+/* --- UX 2026-11-11b: form fields must fit narrow viewports --- */
+html, body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.workspace,
+.editor-panel,
+.editor-card,
+.field-grid,
+.field-row-2,
+.field,
+.sheet-stage {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.workspace {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.editor-card {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: clip;
+}
+
+select,
+input[type="text"],
+input[type="number"],
+input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]) {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.header-actions {
+  max-width: 100%;
+}
+
+.lang-picker,
+.lang-picker select {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Isolate A4 preview so 210mm never widens the whole page */
+.sheet-stage {
+  width: 100%;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+@media screen {
+  .a4-sheet {
+    width: min(210mm, 100%);
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 640px) {
+  .workspace {
+    padding: 12px;
+  }
+
+  .field-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .sister-tools {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .header-main {
+    gap: 10px;
+  }
+
+  .app-header {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media print {
+  html, body {
+    overflow: visible;
+  }
+  .a4-sheet {
+    width: 210mm !important;
+    max-width: none !important;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .vessel-id-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .bottom-reference-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
