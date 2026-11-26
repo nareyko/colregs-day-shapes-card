@@ -33,7 +33,7 @@ const PACKS = {
     checklistTitle: "WATCHKEEPING NOTES",
     checklistItems: [
       "Day shapes are black and show by day; at night use the matching lights.",
-      "Motorsailing under sail alone is wrong — show the cone apex down when the engine is driving.",
+      "Sails up and engine driving the boat: show a cone forward, apex down.",
       "Fishing (two cones) is not the same as trawling lights at night; read Rule 26 carefully.",
       "RAM and NUC look similar at a glance — count balls vs ball-diamond-ball.",
       "Aground (three balls) and at anchor (one ball) are easy to confuse from far away.",
@@ -75,7 +75,7 @@ const PACKS = {
       },
       diamond: {
         name: "Long tow",
-        meaning: "Diamond — tow > 200 m (minesweeping also uses a diamond).",
+        meaning: "Diamond — tow > 200 m.",
       },
       cone_up: {
         name: "Gear outboard",
@@ -110,7 +110,7 @@ const PACKS = {
     checklistTitle: "HINWEISE FÜR DIE WACHE",
     checklistItems: [
       "Tageszeichen sind schwarz und gelten bei Tag; nachts die zugehörigen Lichter führen.",
-      "Motorsailen unter Segel allein reicht nicht — Kegel Spitze nach unten, wenn der Motor treibt.",
+      "Segel gesetzt und Motor treibt das Boot an: vorn einen Kegel zeigen, Spitze nach unten.",
       "Fischen (zwei Kegel) ist nicht dasselbe wie Schleppnetz-Lichter — Regel 26 genau lesen.",
       "RAM und NUC ähneln sich auf den ersten Blick — Bälle gegen Ball-Raute-Ball zählen.",
       "Auf Grund (drei Bälle) und vor Anker (ein Ball) sind aus der Ferne leicht zu verwechseln.",
@@ -152,7 +152,7 @@ const PACKS = {
       },
       diamond: {
         name: "Langer Schleppzug",
-        meaning: "Raute — Schleppzug > 200 m (auch Minenräumen).",
+        meaning: "Raute — Schleppzug > 200 m.",
       },
       cone_up: {
         name: "Gerät ausgebracht",
@@ -187,7 +187,7 @@ const PACKS = {
     checklistTitle: "NOTATKI DLA WACHTY",
     checklistItems: [
       "Znaki dzienne są czarne i obowiązują w dzień; w nocy używaj odpowiadających świateł.",
-      "Motorosailing pod samym żaglem to błąd — stożek wierzchołkiem w dół, gdy pracuje silnik.",
+      "Żagle postawione i silnik napędza jacht: z przodu stożek wierzchołkiem w dół.",
       "Rybołówstwo (dwa stożki) to nie to samo co światła trałowania — czytaj regułę 26.",
       "RAM i NUC wyglądają podobnie — policz kule wobec kula-romb-kula.",
       "Na mieliźnie (trzy kule) i na kotwicy (jedna kula) łatwo pomylić z daleka.",
@@ -229,7 +229,7 @@ const PACKS = {
       },
       diamond: {
         name: "Długi hol",
-        meaning: "Romb — hol > 200 m (także trałowanie min).",
+        meaning: "Romb — hol > 200 m.",
       },
       cone_up: {
         name: "Narzędzie za burtą",
@@ -306,7 +306,7 @@ const PACKS = {
       },
       diamond: {
         name: "Длинный буксир",
-        meaning: "Ромб — буксир > 200 м (также траление мин).",
+        meaning: "Ромб — буксир > 200 м.",
       },
       cone_up: {
         name: "Снасть за бортом",
@@ -341,7 +341,7 @@ const PACKS = {
     checklistTitle: "NOTAS DE GUARDIA",
     checklistItems: [
       "Las marcas diurnas son negras y valen de día; de noche use las luces correspondientes.",
-      "A motor bajo vela sola no basta — cono con vértice abajo si el motor propulsa.",
+      "Con velas izadas y el motor propulsando: muestre a proa un cono con el vértice hacia abajo.",
       "Pesca (dos conos) no es lo mismo que luces de arrastre; lea la Regla 26.",
       "RAM y NUC se parecen de lejos — cuente bolas frente a bola-rombo-bola.",
       "Varado (tres bolas) y fondeado (una bola) se confunden a distancia.",
@@ -383,7 +383,7 @@ const PACKS = {
       },
       diamond: {
         name: "Remolque largo",
-        meaning: "Rombo — remolque > 200 m (también rastreo de minas).",
+        meaning: "Rombo — remolque > 200 m.",
       },
       cone_up: {
         name: "Arte fuera",
@@ -418,7 +418,7 @@ const PACKS = {
     checklistTitle: "VAKTANTECKNINGAR",
     checklistItems: [
       "Dagsignaler är svarta och gäller dagtid; nattetid används motsvarande lanternor.",
-      "Motorsailing med bara segel räcker inte — kon med spetsen nedåt när motorn driver.",
+      "Segel uppe och motorn driver båten: visa en kon förut med spetsen nedåt.",
       "Fiske (två koner) är inte samma sak som trålljus — läs regel 26 noga.",
       "RAM och NUC liknar varandra på avstånd — räkna bollar mot boll-romb-boll.",
       "På grund (tre bollar) och till ankars (en boll) förväxlas lätt långt bort.",
@@ -460,7 +460,7 @@ const PACKS = {
       },
       diamond: {
         name: "Lång bogsering",
-        meaning: "Romb — bogsering > 200 m (även minsvepning).",
+        meaning: "Romb — bogsering > 200 m.",
       },
       cone_up: {
         name: "Redskap ute",
@@ -537,7 +537,7 @@ const PACKS = {
       },
       diamond: {
         name: "Довгий буксир",
-        meaning: "Ромб — буксир > 200 м (також тралення мін).",
+        meaning: "Ромб — буксир > 200 м.",
       },
       cone_up: {
         name: "Снасть за бортом",
@@ -614,7 +614,7 @@ const PACKS = {
       },
       diamond: {
         name: "قطر طويل",
-        meaning: "معين — قطر > 200 م (أيضًا كنس الألغام).",
+        meaning: "معين — قطر > 200 م.",
       },
       cone_up: {
         name: "عدة للخارج",
@@ -691,7 +691,7 @@ const PACKS = {
       },
       diamond: {
         name: "长拖带",
-        meaning: "菱形 — 拖带长度 > 200 m（扫雷也用菱形）。",
+        meaning: "菱形 — 拖带长度 > 200 m。",
       },
       cone_up: {
         name: "渔具外伸",
@@ -768,7 +768,7 @@ const PACKS = {
       },
       diamond: {
         name: "גרירה ארוכה",
-        meaning: "מעוין — גרירה > 200 מ׳ (גם סריקת מוקשים).",
+        meaning: "מעוין — גרירה > 200 מ׳.",
       },
       cone_up: {
         name: "ציוד בחוץ",

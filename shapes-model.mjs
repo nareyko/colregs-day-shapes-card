@@ -76,7 +76,7 @@ export const DAY_SHAPES = Object.freeze([
     svgKind: "diamond",
     nameEn: "Towing (long tow)",
     meaningEn:
-      "Black diamond — towing with tow length > 200 m (Rule 24). Minesweeping also displays a diamond.",
+      "Black diamond — towing with tow length > 200 m (Rule 24).",
   },
   {
     id: "cone_up",

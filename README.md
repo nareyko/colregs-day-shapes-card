@@ -35,7 +35,7 @@ A 3×3 visual grid of the main COLREGS day shapes (Rules 24–30) used by coasta
 | Two balls | Not under command (NUC) | 27 |
 | Three balls | Aground | 30 |
 | Cylinder | Constrained by draught | 28 |
-| Diamond | Towing with tow > 200 m (also used in minesweeping) | 24 |
+| Diamond | Towing with tow > 200 m | 24 |
 | Cone apex up | Fishing gear extending > 150 m that way | 26 |
 
 Optional vessel name and home waters print on the sheet (same pattern as mayday / anchor cards). Ten locales: en, de, pl, ru, es, sv, uk, ar, zh, he.
